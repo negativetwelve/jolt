@@ -42,23 +42,25 @@ const program = new commander.Command(COMMAND)
  */
 const runProgram = (program, command, args) => {
   // Always check if there's an update regardless of what command the user runs.
-  const notifier = updateNotifier({pkg: Package, updateCheckInterval: 0});
-  const {update} = notifier;
+  updateNotifier({
+    pkg: Package,
+    callback: (update) => {
+      if (update) {
+        // If there's an update, download it and then re-run the previous command.
+        log(`Retrieving updated version: ${chalk.green(update.latest)}`);
 
-  if (update) {
-    // If there's an update, download it and then re-run the previous command.
-    log(`Retrieving updated version: ${chalk.green(update.latest)}`);
-
-    // TODO(mark): Add progress bar or show the actual output from yarn.
-    spawn.sync('yarn', ['global', 'add', Package.name]);
-    spawn.sync(COMMAND, [command, ...args], {stdio: 'inherit'});
-  } else if (command === undefined || command === 'help') {
-    program.help();
-  } else {
-    run(command, args, {
-      verbose: program.verbose,
-    });
-  }
+        // TODO(mark): Add progress bar or show the actual output from yarn.
+        spawn.sync('yarn', ['global', 'add', Package.name]);
+        spawn.sync(COMMAND, [command, ...args], {stdio: 'inherit'});
+      } else if (command === undefined || command === 'help') {
+        program.help();
+      } else {
+        run(command, args, {
+          verbose: program.verbose,
+        });
+      }
+    },
+  });
 };
 
 /**
