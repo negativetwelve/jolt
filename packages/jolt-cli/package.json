@@ -1,6 +1,6 @@
 {
   "name": "jolt-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Jolt CLI for building apps.",
   "license": "MIT",
   "main": "bin/jolt-cli.js",
