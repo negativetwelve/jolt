@@ -15,4 +15,4 @@ The Jolt repo is managed as a monorepo that is composed of many npm packages.
 | Package | Description |
 |---------|-------------|
 | [`jolt-cli`](/packages/jolt-cli) | Global CLI which uses jolt-core. |
-| [`jolt-scripts`](/packages/jolt-scripts) | Set of Jolt scripts that the CLI runs. |
+| [`jolt-scripts`](/packages/jolt-scripts) | Set of Jolt scripts that jolt-cli runs. |

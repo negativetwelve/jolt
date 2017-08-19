@@ -1,0 +1,25 @@
+{
+  "name": "jolt-scripts",
+  "version": "0.0.7",
+  "description": "Set of Jolt scripts that jolt-cli runs.",
+  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "development",
+    "dx",
+    "jolt",
+    "scripts"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-scripts",
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "rimraf build && yarn transpile",
+    "prepublishOnly": "yarn build",
+    "transpile": "babel src --out-dir build --ignore '**/*.spec.js'"
+  }
+}
