@@ -1,6 +1,6 @@
 {
   "name": "jolt-cli",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Jolt CLI for building apps.",
   "license": "MIT",
   "main": "bin/jolt-cli.js",
@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "rimraf build && yarn transpile",
+    "prepublishOnly": "yarn build",
     "transpile": "babel src --out-dir build --ignore '**/*.spec.js'"
   }
 }

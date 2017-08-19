@@ -32,6 +32,7 @@
     "jolt": "node ./packages/jolt-cli",
     "lint": "eslint packages",
     "precommit": "lint-staged",
+    "publish": "lerna publish",
     "test": "jest"
   }
 }
