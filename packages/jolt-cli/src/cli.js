@@ -8,7 +8,7 @@ import updateNotifier from 'update-notifier';
 import Package from '../package.json';
 import {COMMAND} from './config';
 import {log} from './utils';
-import {runCommand} from './runner';
+import run from './run';
 
 
 /**
@@ -40,7 +40,7 @@ const program = new commander.Command(COMMAND)
  * Runs the main program. If we recognize the project, we delegate to
  * the project scripts. If not, we print out a message describing what to do.
  */
-const run = (program, command, args) => {
+const runProgram = (program, command, args) => {
   // Always check if there's an update regardless of what command the user runs.
   const notifier = updateNotifier({pkg: Package, updateCheckInterval: 1000});
   const {update} = notifier;
@@ -55,7 +55,7 @@ const run = (program, command, args) => {
   } else if (command === undefined || command === 'help') {
     program.help();
   } else {
-    runCommand(command, args, {
+    run(command, args, {
       verbose: program.verbose,
     });
   }
@@ -67,17 +67,9 @@ const run = (program, command, args) => {
  * documentation. All commands defer to the `run` function defined above.
  */
 program
-  .command('init')
-  .description('initializes a new Lambda project');
-
-program
-  .command('generate')
-  .description('generates a Lambda app');
-
-program
   .command('help')
   .description('displays commands and options');
 
 // Main function that actually runs the CLI commands.
 program.parse(process.argv);
-run(program, command, process.argv.slice(3));
+runProgram(program, command, process.argv.slice(3));

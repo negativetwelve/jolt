@@ -16,7 +16,7 @@ if (major < 8) {
   console.error(
     chalk.red(
       'You are running Node ' + currentNodeVersion + '.\n' +
-      'Lambda requires Node 6 or higher. \n' +
+      'Jolt requires Node 6 or higher. \n' +
       'Please update your version of Node.'
     )
   );
