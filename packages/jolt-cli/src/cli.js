@@ -42,7 +42,7 @@ const program = new commander.Command(COMMAND)
  */
 const runProgram = (program, command, args) => {
   // Always check if there's an update regardless of what command the user runs.
-  const notifier = updateNotifier({pkg: Package, updateCheckInterval: 1000});
+  const notifier = updateNotifier({pkg: Package, updateCheckInterval: 0});
   const {update} = notifier;
 
   if (update) {
