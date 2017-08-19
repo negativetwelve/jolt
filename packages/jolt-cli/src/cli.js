@@ -62,7 +62,7 @@ const runProgram = (program, command, args) => {
         });
       }
     },
-  });
+  }).check();
 };
 
 /**
