@@ -51,6 +51,8 @@ const runProgram = (program, command, args) => {
 
         // TODO(mark): Add progress bar or show the actual output from yarn.
         spawn.sync('yarn', ['global', 'add', Package.name]);
+
+        log(`${COMMAND} ${command} ${args.join(' ')}`);
         spawn.sync(COMMAND, [command, ...args], {stdio: 'inherit'});
       } else if (command === undefined || command === 'help') {
         program.help();
