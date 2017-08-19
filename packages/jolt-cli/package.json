@@ -9,7 +9,7 @@
   },
   "files": [
     "bin",
-    "src"
+    "build"
   ],
   "keywords": [
     "cli",
@@ -17,21 +17,9 @@
     "dx",
     "jolt"
   ],
-  "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
-  "contributors": [
-    {
-      "name": "Mark Miyashita",
-      "email": "negativetwelve@gmail.com"
-    }
-  ],
-  "repository": {
-    "url": "git+https://github.com/negativetwelve/jolt.git",
-    "type": "git"
-  },
-  "bugs": {
-    "url": "https://github.com/negativetwelve/jolt/issues"
-  },
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-cli",
+  "repository": "https://github.com/negativetwelve/jolt",
   "engines": {
     "node": ">=0.10.0"
   },
