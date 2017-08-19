@@ -9,7 +9,7 @@ import {log} from './utils';
 /**
  * Actually delegates the command we want to run to the installed PACKAGE.
  */
-export default (command, args, {verbose = false}) => {
+export const run = (command, args, {verbose = false}) => {
   const packagePath = require.resolve(PACKAGE);
   const executable = 'node';
   const commandArgs = [packagePath, command, ...args];

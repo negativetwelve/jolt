@@ -8,7 +8,7 @@ import updateNotifier from 'update-notifier';
 import Package from '../package.json';
 import {COMMAND} from './config';
 import {log} from './utils';
-import run from './run';
+import {run} from './run';
 
 
 /**
