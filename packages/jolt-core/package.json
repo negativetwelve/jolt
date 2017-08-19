@@ -1,0 +1,24 @@
+{
+  "name": "jolt-core",
+  "version": "0.0.7",
+  "description": "Core library that powers Jolt.",
+  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "development",
+    "dx",
+    "jolt"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-core",
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "rimraf build && yarn transpile",
+    "prepublishOnly": "yarn build",
+    "transpile": "babel src --out-dir build --ignore '**/*.spec.js'"
+  }
+}
