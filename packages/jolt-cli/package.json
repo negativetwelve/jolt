@@ -1,11 +1,37 @@
 {
   "name": "jolt-cli",
   "version": "0.0.1",
+  "description": "Jolt CLI for building apps.",
   "license": "MIT",
   "main": "bin/jolt-cli.js",
   "bin": {
     "jolt": "bin/jolt-cli.js"
   },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "keywords": [
+    "cli",
+    "development",
+    "dx",
+    "jolt"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
+  "contributors": [
+    {
+      "name": "Mark Miyashita",
+      "email": "negativetwelve@gmail.com"
+    }
+  ],
+  "repository": {
+    "url": "git+https://github.com/negativetwelve/jolt.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/negativetwelve/jolt/issues"
+  },
+  "homepage": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-cli",
   "engines": {
     "node": ">=0.10.0"
   },
