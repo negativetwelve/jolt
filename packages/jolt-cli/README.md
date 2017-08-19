@@ -5,5 +5,7 @@
 ## Install
 
 ```shell
-yarn add --dev jolt-cli
+yarn global add jolt-cli
 ```
+
+This will install the global `jolt` command.
