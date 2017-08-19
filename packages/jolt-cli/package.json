@@ -30,5 +30,7 @@
     "update-notifier": "^2.2.0"
   },
   "scripts": {
+    "build": "rimraf build && yarn transpile",
+    "transpile": "babel src --out-dir build --ignore '**/*.spec.js'"
   }
 }
