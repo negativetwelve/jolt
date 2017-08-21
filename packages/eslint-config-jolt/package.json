@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-jolt",
+  "version": "0.0.0",
+  "description": "Default ESLint config for jolt packages.",
+  "license": "MIT",
+  "main": "build/config",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "eslint",
+    "jolt",
+    "lint"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
+  "dependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.8.1",
+    "eslint-plugin-jest": "^20.0.3"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build --ignore '**/*.spec.js'",
+    "clean": "rimraf build",
+    "prepublishOnly": "yarn run clean && yarn run build"
+  }
+}
