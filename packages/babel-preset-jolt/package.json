@@ -1,0 +1,30 @@
+{
+  "name": "babel-preset-jolt",
+  "version": "0.0.0",
+  "description": "Default babel configuration for jolt packages.",
+  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "babel",
+    "jolt",
+    "preset"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
+  "dependencies": {
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build --ignore '**/*.spec.js'",
+    "clean": "rimraf build",
+    "prepublishOnly": "yarn run clean && yarn run build"
+  }
+}
