@@ -4,8 +4,8 @@
   "description": "Default jest configuration for jolt packages.",
   "license": "MIT",
   "files": [
-    "jest-plugins.js",
-    "jest-preset.json"
+    "jest-preset.json",
+    "setup.js"
   ],
   "keywords": [
     "jest",
