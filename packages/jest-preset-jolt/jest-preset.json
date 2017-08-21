@@ -1,0 +1,7 @@
+{
+  "globals": {},
+  "setupFiles": [
+    "jest-addons/setup"
+  ],
+  "testEnvironment": "node"
+}
