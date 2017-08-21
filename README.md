@@ -27,10 +27,12 @@ Package | Version | Downloads | Description
 [`eslint-config-jolt`](/packages/eslint-config-jolt) | [![npm](https://img.shields.io/npm/v/eslint-config-jolt.svg)][npm-eslint] | [![npm](https://img.shields.io/npm/dt/eslint-config-jolt.svg)][npm-eslint] | Default ESLint config for jolt packages.
 [`jest-preset-jolt`](/packages/jest-preset-jolt) | [![npm](https://img.shields.io/npm/v/jest-preset-jolt.svg)][npm-jest] | [![npm](https://img.shields.io/npm/dt/jest-preset-jolt.svg)][npm-jest] | Default jest config for jolt packages.
 
+[/]: Core
 [npm-cli]: https://www.npmjs.com/package/jolt-cli
 [npm-core]: https://www.npmjs.com/package/jolt-core
 [npm-scripts]: https://www.npmjs.com/package/jolt-scripts
 
+[/]: Configs
 [npm-babel]: https://www.npmjs.com/package/babel-preset-jolt
 [npm-eslint]: https://www.npmjs.com/package/eslint-config-jolt
 [npm-jest]: https://www.npmjs.com/package/jest-preset-jolt
