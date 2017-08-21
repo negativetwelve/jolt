@@ -14,7 +14,7 @@
   ],
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-scripts",
+  "repository": "negativetwelve/jolt",
   "scripts": {
     "build": "babel src --out-dir build --ignore '**/*.spec.js'",
     "clean": "rimraf build",

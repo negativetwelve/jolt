@@ -1813,8 +1813,8 @@ get-pkg-repo@^1.0.0:
     through2 "^2.0.0"
 
 get-port@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.1.0.tgz#ef01b18a84ca6486970ff99e54446141a73ffd3e"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.2.0.tgz#dd7ce7de187c06c8bf353796ac71e099f0980ebc"
 
 get-stdin@^4.0.1:
   version "4.0.1"
@@ -2331,21 +2331,6 @@ istanbul-reports@^1.1.1:
   dependencies:
     handlebars "^4.0.3"
 
-jest-action@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jest-action/-/jest-action-1.0.0.tgz#c4427ebdb9026d91db45cadcfcb0d2f7f4fc6fd9"
-  dependencies:
-    jest-set "^2.0.0"
-
-jest-addons@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/jest-addons/-/jest-addons-2.3.0.tgz#1789d57e16c6ab0f993b172b0486ff751e67f73b"
-  dependencies:
-    jest-action "^1.0.0"
-    jest-context "^2.1.0"
-    jest-its "^1.0.0"
-    jest-set "^2.0.0"
-
 jest-changed-files@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-20.0.3.tgz#9394d5cc65c438406149bef1bf4d52b68e03e3f8"
@@ -2400,10 +2385,6 @@ jest-config@^20.0.4:
     jest-validate "^20.0.3"
     pretty-format "^20.0.3"
 
-jest-context@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/jest-context/-/jest-context-2.1.0.tgz#8d92b636323ce0698f801b6282029feb987c9545"
-
 jest-diff@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-20.0.3.tgz#81f288fd9e675f0fb23c75f1c2b19445fe586617"
@@ -2442,13 +2423,6 @@ jest-haste-map@^20.0.4:
     micromatch "^2.3.11"
     sane "~1.6.0"
     worker-farm "^1.3.1"
-
-jest-its@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jest-its/-/jest-its-1.0.0.tgz#965dfbd7173fdc096ce503faf64fe4d9736d332d"
-  dependencies:
-    invariant "^2.2.2"
-    jest-set "^2.0.0"
 
 jest-jasmine2@^20.0.4:
   version "20.0.4"
@@ -2492,6 +2466,10 @@ jest-mock@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-20.0.3.tgz#8bc070e90414aa155c11a8d64c869a0d5c71da59"
 
+jest-plugins@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/jest-plugins/-/jest-plugins-1.0.0.tgz#56670c866f66d543e1ba2e10017aaf2c7d4ccf26"
+
 jest-regex-util@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-20.0.3.tgz#85bbab5d133e44625b19faf8c6aa5122d085d762"
@@ -2529,10 +2507,6 @@ jest-runtime@^20.0.4:
     micromatch "^2.3.11"
     strip-bom "3.0.0"
     yargs "^7.0.2"
-
-jest-set@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jest-set/-/jest-set-2.0.0.tgz#977c2120120e83086e86519c1a84c2a1c800f419"
 
 jest-snapshot@^20.0.3:
   version "20.0.3"

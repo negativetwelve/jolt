@@ -4,6 +4,7 @@
   "description": "Default jest configuration for jolt packages.",
   "license": "MIT",
   "files": [
+    "jest-plugins.js",
     "jest-preset.json"
   ],
   "keywords": [
@@ -14,10 +15,11 @@
   ],
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jest-preset-jolt",
+  "repository": "negativetwelve/jolt",
   "dependencies": {
-    "babel-jest": "^20.0.0",
-    "jest": "^20.0.0",
-    "jest-addons": "^2.3.0"
+    "jest-plugins": "^1.0.0"
+  },
+  "peerDependencies": {
+    "jest": "*"
   }
 }

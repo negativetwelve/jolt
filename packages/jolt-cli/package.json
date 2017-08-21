@@ -19,7 +19,7 @@
   ],
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-cli",
+  "repository": "negativetwelve/jolt",
   "engines": {
     "node": ">=0.10.0"
   },
