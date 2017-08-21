@@ -4,5 +4,8 @@ module.exports = {
   projects: [
     '<rootDir>/projects/*',
   ],
+  setupFiles: [
+    'jest-addons/setup',
+  ],
   testEnvironment: 'node',
 };
