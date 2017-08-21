@@ -22,4 +22,5 @@ Package | Description
 Package | Description
 --------|------------
 [`babel-preset-jolt`](/packages/babel-preset-jolt) | Default babel config for jolt packages.
+[`eslint-config-jolt`](/packages/eslint-config-jolt) | Default ESLint config for jolt packages.
 [`jest-preset-jolt`](/packages/jest-preset-jolt) | Default jest config for jolt packages.
