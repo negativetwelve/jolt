@@ -1,7 +1,4 @@
 {
-  "globals": {},
-  "setupFiles": [
-    "jest-addons/setup"
-  ],
+  "setupTestFrameworkScriptFile": "jest-preset-jolt/setup",
   "testEnvironment": "node"
 }
