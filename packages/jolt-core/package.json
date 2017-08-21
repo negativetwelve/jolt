@@ -15,8 +15,8 @@
   "homepage": "https://github.com/negativetwelve/jolt",
   "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-core",
   "scripts": {
-    "build": "rimraf build && yarn transpile",
-    "prepublishOnly": "yarn build",
-    "transpile": "babel src --out-dir build --ignore '**/*.spec.js'"
+    "build": "babel src --out-dir build --ignore '**/*.spec.js'",
+    "clean": "rimraf build",
+    "prepublishOnly": "yarn run clean && yarn run build"
   }
 }
