@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Default babel configuration for jolt packages.",
   "license": "MIT",
+  "main": "build/preset",
   "files": [
     "build"
   ],
