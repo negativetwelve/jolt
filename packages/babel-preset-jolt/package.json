@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-jolt",
-  "version": "1.3.4",
+  "version": "2.0.0",
   "description": "Default babel configuration for jolt packages.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
