@@ -3,19 +3,19 @@
   "version": "1.3.0",
   "description": "Default jest configuration for jolt packages.",
   "license": "MIT",
-  "files": [
-    "jest-preset.json",
-    "setup.js"
-  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
   "keywords": [
     "jest",
     "jolt",
     "preset",
     "test"
   ],
-  "author": "Mark Miyashita <negativetwelve@gmail.com>",
-  "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "negativetwelve/jolt",
+  "files": [
+    "jest-preset.json",
+    "setup.js"
+  ],
   "dependencies": {
     "jest-plugins": "^1.2.0",
     "jest-plugins-recommended": "^1.2.0"

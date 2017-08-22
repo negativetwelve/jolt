@@ -3,17 +3,17 @@
   "version": "1.3.0",
   "description": "Core library that powers Jolt.",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
   "keywords": [
     "development",
     "dx",
     "jolt"
   ],
-  "author": "Mark Miyashita <negativetwelve@gmail.com>",
-  "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "negativetwelve/jolt",
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "babel src --out-dir build --ignore '**/*.spec.js'",
     "clean": "rimraf build",
