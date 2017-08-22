@@ -13,6 +13,8 @@ Adds default presets:
 Add default plugins:
 
 * babel-plugin-transform-builtin-extend
+* babel-plugin-transform-class-properties
+* babel-plugin-transform-decorators-legacy
 * babel-plugin-transform-export-extensions
 * babel-plugin-transform-object-rest-spread
 

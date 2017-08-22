@@ -23,8 +23,10 @@ export default function (context, options = {}) {
       [pluginTransformBuiltinExtend, {
         globals: ['Array', 'Error'],
       }],
-      pluginTransformClassProperties,
+
+      // NOTE(mark): Decorators MUST come before class properties.
       pluginTransformDecoratorsLegacy,
+      pluginTransformClassProperties,
       pluginTransformExportExtensions,
       pluginTransformObjectRestSpread,
     ],
