@@ -12,7 +12,7 @@ import pluginTransformObjectRestSpread from 'babel-plugin-transform-object-rest-
 
 
 // eslint-disable-next-line
-export default function (context, options = {}) {
+export default (context, options = {}) => {
   return {
     presets: [
       presetES2015,
