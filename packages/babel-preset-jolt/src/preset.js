@@ -6,6 +6,7 @@ import presetES2017 from 'babel-preset-es2017';
 // Plugins
 import pluginTransformBuiltinExtend from 'babel-plugin-transform-builtin-extend';
 import pluginTransformClassProperties from 'babel-plugin-transform-class-properties';
+import pluginTransformDecoratorsLegacy from 'babel-plugin-transform-decorators-legacy';
 import pluginTransformExportExtensions from 'babel-plugin-transform-export-extensions';
 import pluginTransformObjectRestSpread from 'babel-plugin-transform-object-rest-spread';
 
@@ -23,6 +24,7 @@ export default function (context, options = {}) {
         globals: ['Array', 'Error'],
       }],
       pluginTransformClassProperties,
+      pluginTransformDecoratorsLegacy,
       pluginTransformExportExtensions,
       pluginTransformObjectRestSpread,
     ],
