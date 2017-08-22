@@ -23,3 +23,9 @@ Add the package as a preset for your jest configuration. In your `package.json`:
   "preset": "jest-preset-jolt"
 }
 ```
+
+*NOTE* If you have a custom `jest` config and you override `setupTestFrameworkScriptFile` in your config, you'll have to import the preset's setup function at the top of your `setupTestFrameworkScriptFile` file:
+
+```javascript
+import 'jest-preset-jolt/setup';
+```
