@@ -4,13 +4,7 @@
 [![npm](https://img.shields.io/npm/dt/babel-preset-jolt.svg)](https://www.npmjs.com/package/babel-preset-jolt)
 [![npm](https://img.shields.io/npm/l/babel-preset-jolt.svg)](https://github.com/negativetwelve/jolt/blob/master/LICENSE)
 
-Adds default presets:
-
-* babel-preset-es2015
-* babel-preset-es2016
-* babel-preset-es2017
-
-Add default plugins:
+Add the following plugins:
 
 * babel-plugin-transform-builtin-extend
 * babel-plugin-transform-class-properties
