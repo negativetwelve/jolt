@@ -1,6 +1,6 @@
 {
   "name": "jolt-config",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "description": "Jolt config for the CLI.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
@@ -17,7 +17,6 @@
   "files": [
     "build"
   ],
-  "dependencies": {},
   "scripts": {
     "build": "babel src --out-dir build --ignore '**/*.spec.js'",
     "clean": "rimraf build",
