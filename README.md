@@ -10,18 +10,14 @@ The Jolt repo is managed as a monorepo that is composed of many npm packages.
 
 Package | Version | Description
 --------|---------|------------
-[`jolt-core`](/packages/jolt-core) | [![npm](https://img.shields.io/npm/v/jolt-core.svg)][npm-core] | Core library that powers Jolt.
-
-[npm-core]: https://www.npmjs.com/package/jolt-core
-
-### Other Packages
-
-Package | Version | Description
---------|---------|------------
 [`jolt-cli`](/packages/jolt-cli) | [![npm](https://img.shields.io/npm/v/jolt-cli.svg)][npm-cli] | Global CLI which uses jolt-core.
+[`jolt-config`](/packages/jolt-config) | [![npm](https://img.shields.io/npm/v/jolt-config.svg)][npm-config] | Defines and parses the jolt config.
+[`jolt-core`](/packages/jolt-core) | [![npm](https://img.shields.io/npm/v/jolt-core.svg)][npm-core] | Core library that powers Jolt.
 [`jolt-scripts`](/packages/jolt-scripts) | [![npm](https://img.shields.io/npm/v/jolt-scripts.svg)][npm-scripts] | Set of Jolt scripts that jolt-cli runs.
 
 [npm-cli]: https://www.npmjs.com/package/jolt-cli
+[npm-config]: https://www.npmjs.com/package/jolt-config
+[npm-core]: https://www.npmjs.com/package/jolt-core
 [npm-scripts]: https://www.npmjs.com/package/jolt-scripts
 
 ### Default Configs
