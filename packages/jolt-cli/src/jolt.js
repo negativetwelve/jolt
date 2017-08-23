@@ -18,8 +18,6 @@ new commander.Command(COMMAND)
   .version(Package.version, '-v, --version')
   .arguments('<command>')
   .usage('<command> [options]')
-  .command('help')
-  .description('displays commands and options')
   .on('--help', () => log(''))
   .command('self-update', 'updates the CLI and all dependencies')
   .parse(process.argv);

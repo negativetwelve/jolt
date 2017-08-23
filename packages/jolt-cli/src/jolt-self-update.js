@@ -18,8 +18,7 @@ updateNotifier({
   pkg: Package,
   callback: (error, update) => {
     if (update && update.current !== update.latest) {
-      // If there's an update, download it and then re-run the previous
-      // command.
+      // If there's an update, download it.
       log(`Retrieving updated version: ${chalk.green(update.latest)}`);
       spawn.sync('yarn', ['global', 'add', Package.name], {
         stdio: 'inherit',
