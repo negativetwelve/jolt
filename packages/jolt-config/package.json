@@ -1,34 +1,23 @@
 {
-  "name": "jolt-cli",
-  "version": "2.0.5",
-  "description": "Build high-quality packages faster with Jolt.",
+  "name": "jolt-config",
+  "version": "0.0.0",
+  "description": "Jolt config for the CLI.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
   "repository": "negativetwelve/jolt",
   "keywords": [
     "cli",
+    "config",
     "development",
     "dx",
     "jolt"
   ],
-  "main": "bin/jolt-cli",
+  "main": "build/index",
   "files": [
-    "bin",
     "build"
   ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "bin": {
-    "jolt": "bin/jolt-cli"
-  },
-  "dependencies": {
-    "chalk": "^2.1.0",
-    "commander": "^2.11.0",
-    "cross-spawn": "^5.1.0",
-    "update-notifier": "^2.2.0"
-  },
+  "dependencies": {},
   "scripts": {
     "build": "babel src --out-dir build --ignore '**/*.spec.js'",
     "clean": "rimraf build",
