@@ -41,30 +41,13 @@ const program = new commander.Command(COMMAND)
  * the project scripts. If not, we print out a message describing what to do.
  */
 const runProgram = (program, command, args) => {
-  // Always check if there's an update regardless of what command the user runs.
-  updateNotifier({
-    pkg: Package,
-    callback: (error, update) => {
-      if (update) {
-        // If there's an update, download it and then re-run the previous command.
-        log(`Retrieving updated version: ${chalk.green(update.latest)}`);
-
-        // TODO(mark): Add progress bar or show the actual output from yarn.
-        spawn.sync('yarn', ['global', 'add', Package.name]);
-
-        log(`${COMMAND} ${command} ${args.join(' ')}`);
-        spawn.sync(COMMAND, [command, ...args], {stdio: 'inherit'});
-      }
-
-      if (command === undefined || command === 'help') {
-        program.help();
-      } else {
-        run(command, args, {
-          verbose: program.verbose,
-        });
-      }
-    },
-  });
+  if (command === undefined || command === 'help') {
+    program.help();
+  } else {
+    run(command, args, {
+      verbose: program.verbose,
+    });
+  }
 };
 
 /**
@@ -78,4 +61,20 @@ program
 
 // Main function that actually runs the CLI commands.
 program.parse(process.argv);
-runProgram(program, command, process.argv.slice(3));
+
+// Always check if there's an update regardless of what command the user runs.
+updateNotifier({
+  pkg: Package,
+  callback: (error, update) => {
+    if (update && update.current !== update.latest) {
+      // If there's an update, download it and then re-run the previous command.
+      log(`Retrieving updated version: ${chalk.green(update.latest)}`);
+
+      // TODO(mark): Add progress bar or show the actual output from yarn.
+      spawn.sync('yarn', ['global', 'add', Package.name], {stdio: 'inherit'});
+    }
+
+    // Always run the original command after updating is complete.
+    runProgram(program, command, process.argv.slice(3));
+  },
+});
