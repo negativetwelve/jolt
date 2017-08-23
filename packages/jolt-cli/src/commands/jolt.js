@@ -5,10 +5,10 @@ import spawn from 'cross-spawn';
 import updateNotifier from 'update-notifier';
 
 // CLI
-import Package from '../package.json';
-import {COMMAND} from './config';
-import {log} from './utils';
-import {run} from './run';
+import Package from '../../package.json';
+import {COMMAND} from '../config';
+import {log} from '../utils';
+import {run} from '../run';
 
 
 /**

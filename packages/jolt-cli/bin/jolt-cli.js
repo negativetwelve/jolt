@@ -23,4 +23,4 @@ if (major < 6) {
   process.exit(1);
 }
 
-require('../build/cli');
+require('../build/commands/jolt');
