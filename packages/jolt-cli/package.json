@@ -1,6 +1,6 @@
 {
   "name": "jolt-cli",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Jolt CLI for building apps.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
