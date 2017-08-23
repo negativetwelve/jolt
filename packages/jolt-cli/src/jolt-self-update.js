@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Libraries
 import chalk from 'chalk';
 import commander from 'commander';

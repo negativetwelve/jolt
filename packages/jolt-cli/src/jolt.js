@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Libraries
 import commander from 'commander';
 
