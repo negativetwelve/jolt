@@ -28,7 +28,7 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna clean --yes && lerna run clean",
-    "jolt": "node ./packages/jolt-cli",
+    "jolt": "node ./packages/jolt-cli/build/jolt.js",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "test": "jest",

@@ -12,7 +12,7 @@
     "dx",
     "jolt"
   ],
-  "main": "bin/jolt-cli",
+  "main": "build/jolt",
   "files": [
     "bin",
     "build"
@@ -21,7 +21,7 @@
     "node": ">=0.10.0"
   },
   "bin": {
-    "jolt": "bin/jolt-cli"
+    "jolt": "build/jolt"
   },
   "dependencies": {
     "chalk": "^2.1.0",
