@@ -4,7 +4,7 @@
 
 /**
  * This file works with any node version >= 0.10.0. If the version is less
- * than 8, we print out a message and ask the developer to upgrade.
+ * than 6, we print out a message and ask the developer to upgrade.
  */
 var chalk = require('chalk');
 
@@ -12,7 +12,7 @@ var currentNodeVersion = process.versions.node;
 var semver = currentNodeVersion.split('.');
 var major = semver[0];
 
-if (major < 8) {
+if (major < 6) {
   console.error(
     chalk.red(
       'You are running Node ' + currentNodeVersion + '.\n' +
