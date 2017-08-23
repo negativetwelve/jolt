@@ -44,7 +44,7 @@ const runProgram = (program, command, args) => {
   // Always check if there's an update regardless of what command the user runs.
   updateNotifier({
     pkg: Package,
-    callback: (update) => {
+    callback: (error, update) => {
       if (update) {
         // If there's an update, download it and then re-run the previous command.
         log(`Retrieving updated version: ${chalk.green(update.latest)}`);
@@ -54,7 +54,9 @@ const runProgram = (program, command, args) => {
 
         log(`${COMMAND} ${command} ${args.join(' ')}`);
         spawn.sync(COMMAND, [command, ...args], {stdio: 'inherit'});
-      } else if (command === undefined || command === 'help') {
+      }
+
+      if (command === undefined || command === 'help') {
         program.help();
       } else {
         run(command, args, {
@@ -62,7 +64,7 @@ const runProgram = (program, command, args) => {
         });
       }
     },
-  }).check();
+  });
 };
 
 /**
