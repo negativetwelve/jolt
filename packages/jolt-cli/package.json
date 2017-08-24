@@ -24,12 +24,10 @@
     "jolt": "build/jolt.js"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "commander": "^2.11.0",
-    "cross-spawn": "^5.1.0",
     "jolt-config": "^2.1.0",
     "jolt-core": "*",
     "jolt-scripts": "*",
+    "jolt-utils": "*",
     "update-notifier": "^2.2.0"
   },
   "scripts": {

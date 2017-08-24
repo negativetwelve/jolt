@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 
 // Libraries
-import chalk from 'chalk';
-import commander from 'commander';
-import spawn from 'cross-spawn';
 import updateNotifier from 'update-notifier';
+import {chalk, commander, log, spawn} from 'jolt-utils';
 
 // CLI
 import Package from '../package.json';
 import {COMMAND} from './config';
-import {log} from './utils';
 
 
 new commander.Command(`${COMMAND} self-update`)

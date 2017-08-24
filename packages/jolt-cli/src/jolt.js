@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
 // Libraries
-import commander from 'commander';
+import {commander, log} from 'jolt-utils';
 
 // CLI
 import Package from '../package.json';
 import {COMMAND} from './config';
-import {log} from './utils';
 
 
 /**
