@@ -1,0 +1,24 @@
+{
+  "name": "jolt-utils",
+  "version": "0.0.0",
+  "description": "Set of utilities that Jolt packages use.",
+  "license": "MIT",
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
+  "keywords": [
+    "development",
+    "dx",
+    "logging",
+    "jolt",
+    "utils"
+  ],
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir build --ignore '**/*.spec.js'",
+    "clean": "rimraf build",
+    "prepublishOnly": "yarn run clean && yarn run build"
+  }
+}
