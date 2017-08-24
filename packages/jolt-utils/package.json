@@ -1,34 +1,26 @@
 {
-  "name": "jolt-cli",
-  "version": "2.2.3",
-  "description": "Build high-quality packages faster with Jolt.",
+  "name": "jolt-utils",
+  "version": "0.0.0",
+  "description": "Set of utilities that Jolt packages use.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
   "repository": "negativetwelve/jolt",
   "keywords": [
-    "cli",
     "development",
     "dx",
-    "jolt"
+    "logging",
+    "jolt",
+    "utils"
   ],
-  "main": "build/jolt",
+  "main": "build/index",
   "files": [
-    "bin",
     "build"
   ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "bin": {
-    "jolt": "build/jolt.js"
-  },
   "dependencies": {
-    "jolt-config": "^2.1.0",
-    "jolt-core": "*",
-    "jolt-scripts": "*",
-    "jolt-utils": "*",
-    "update-notifier": "^2.2.0"
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "cross-spawn": "^5.1.0"
   },
   "scripts": {
     "build": "babel src --out-dir build --ignore '**/*.spec.js'",
