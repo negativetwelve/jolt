@@ -1,3 +1,5 @@
 {
-  "presets": ["react-native"]
+  "presets": ["env"],
+  "comments": false,
+  "compact": true
 }
