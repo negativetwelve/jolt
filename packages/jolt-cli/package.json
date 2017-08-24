@@ -21,7 +21,7 @@
     "node": ">=0.10.0"
   },
   "bin": {
-    "jolt": "build/jolt"
+    "jolt": "build/jolt.js"
   },
   "dependencies": {
     "chalk": "^2.1.0",
