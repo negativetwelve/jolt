@@ -10,8 +10,8 @@ describe('babel-preset-jolt', () => {
     expect(getPreset).not.toThrow();
   });
 
-  it('should be a valid object with presets', () => {
-    expect(preset).toHaveProperty('presets');
+  it('should not contain presets', () => {
+    expect(preset).not.toHaveProperty('presets');
   });
 
   it('should be a valid object with plugins', () => {

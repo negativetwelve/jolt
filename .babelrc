@@ -1,3 +1,5 @@
 {
-  "presets": ["jolt"]
+  "presets": ["env"],
+  "comments": false,
+  "compact": true
 }
