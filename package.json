@@ -17,19 +17,8 @@
     "lint-staged": "^4.0.3",
     "rimraf": "^2.6.1"
   },
-  "workspaces": [
-    "packages/*"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "yarn lint"
-    ]
-  },
   "babel": {
-    "presets": [["env", {"targets": {"node": "4"}}]],
-    "plugins": ["transform-runtime"],
-    "comments": false,
-    "compact": true
+    "presets": ["./packages/babel-preset-jolt/src/preset.js"]
   },
   "eslintIgnore": ["node_modules", "build"],
   "eslintConfig": {
@@ -39,6 +28,14 @@
     "preset": "jest-preset-jolt",
     "testEnvironment": "node"
   },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",

@@ -1,17 +1,17 @@
 // Presets
-import presetEnv from 'babel-preset-env';
-import presetReactNative from 'babel-preset-react-native';
+const presetEnv = require('babel-preset-env').default;
+const presetReactNative = require('babel-preset-react-native').default;
 
 // Plugins
-import transformBuiltinExtend from 'babel-plugin-transform-builtin-extend';
-import transformClassProperties from 'babel-plugin-transform-class-properties';
-import transformDecoratorsLegacy from 'babel-plugin-transform-decorators-legacy';
-import transformExportExtensions from 'babel-plugin-transform-export-extensions';
-import transformObjectRestSpread from 'babel-plugin-transform-object-rest-spread';
-import transformRuntime from 'babel-plugin-transform-runtime';
+const transformBuiltinExtend = require('babel-plugin-transform-builtin-extend').default;
+const transformClassProperties = require('babel-plugin-transform-class-properties').default;
+const transformDecoratorsLegacy = require('babel-plugin-transform-decorators-legacy').default;
+const transformExportExtensions = require('babel-plugin-transform-export-extensions').default;
+const transformObjectRestSpread = require('babel-plugin-transform-object-rest-spread').default;
+const transformRuntime = require('babel-plugin-transform-runtime').default;
 
 
-export default (context, options = {}) => { // eslint-disable-line
+module.exports = (context, options = {}) => { // eslint-disable-line
   const {target} = options;
 
   // These are the plugins that are shared with all targets.
@@ -34,5 +34,9 @@ export default (context, options = {}) => { // eslint-disable-line
       target === 'node' && transformRuntime,
       ...plugins,
     ].filter(Boolean),
+
+    // Remove comments and compact the code.
+    comments: false,
+    compact: true,
   };
 };
