@@ -1,0 +1,29 @@
+{
+  "name": "jolt-lodash",
+  "version": "0.0.0",
+  "description": "Lodash with Jolt extensions.",
+  "license": "MIT",
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/jolt",
+  "repository": "negativetwelve/jolt",
+  "keywords": [
+    "development",
+    "dx",
+    "jolt",
+    "lodash",
+    "utilities",
+    "utils"
+  ],
+  "main": "build/lodash",
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build --ignore '**/*.spec.js'",
+    "clean": "rimraf build",
+    "prepublishOnly": "yarn run clean && yarn run build"
+  }
+}
