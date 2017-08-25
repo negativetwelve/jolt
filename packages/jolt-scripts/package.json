@@ -12,6 +12,7 @@
     "jolt",
     "scripts"
   ],
+  "main": "build/index",
   "files": [
     "build"
   ],

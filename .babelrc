@@ -1,5 +1,6 @@
 {
-  "presets": ["env"],
+  "presets": [["env", {"targets": {"node": "4"}}]],
+  "plugins": ["transform-runtime"],
   "comments": false,
   "compact": true
 }

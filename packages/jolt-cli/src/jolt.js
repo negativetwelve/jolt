@@ -21,4 +21,5 @@ new commander.Command(COMMAND)
   .usage('<command> [options]')
   .on('--help', () => log(''))
   .command('self-update', 'updates the CLI and all dependencies')
+  .command('create', 'creates a new package')
   .parse(process.argv);
