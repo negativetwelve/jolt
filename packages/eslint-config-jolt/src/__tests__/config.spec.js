@@ -1,5 +1,5 @@
 // Modules
-import config from 'eslint-config-jolt';
+import config from '../config';
 
 
 describe('eslint-config-jolt', () => {
