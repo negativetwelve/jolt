@@ -22,7 +22,12 @@ module.exports = (context, options = {}) => { // eslint-disable-line
     compact: true,
 
     presets: resolveDependencies('babel-preset', [
-      target === 'node' && ['env', {targets: {node: 4}}],
+      target === 'node' && ['env', {
+        targets: {node: 4},
+      }],
+      target === 'web' && ['env', {
+        targets: {browsers: ['last 2 versions', 'safari >= 7']},
+      }],
       target === 'react-native' && 'react-native',
     ]),
     plugins: [
