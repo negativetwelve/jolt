@@ -11,7 +11,7 @@
     "jolt",
     "preset"
   ],
-  "main": "build/preset",
+  "main": "build/getPreset",
   "files": [
     "build"
   ],
