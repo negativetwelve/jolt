@@ -4,11 +4,13 @@ module.exports = (prefix, dependencies) => {
       dependency = [dependency];
     }
 
-    if (typeof dependency[0] === 'string') {
-      dependency[0] = require(`${prefix}-${dependency[0]}`);
-      dependency[0] = (
-        dependency[0].__esModule ? dependency[0].default : dependency[0]
-      );
+    const module = dependency[0];
+
+    if (typeof module === 'string') {
+      const required = require(`${prefix}-${module}`);
+
+      // Set the new module as the first item in the dependency array.
+      dependency[0] = required.__esModule ? required.default : required;
     }
 
     return dependency;
