@@ -32,4 +32,46 @@ describe('lodash', () => {
       expect(_.exists([])).toEqual(true);
     });
   });
+
+  describe('.firstN', () => {
+    it('should return an empty array if input is an empty array', () => {
+      expect(_.firstN([], 1)).toEqual([]);
+    });
+
+    it('should return an empty array if n is 0', () => {
+      expect(_.firstN([1, 2, 3], 0)).toEqual([]);
+    });
+
+    it('should return the correct length of array', () => {
+      expect(_.firstN([1, 2, 3], 2)).toEqual([1, 2]);
+    });
+
+    it('should return all elements if n >= length', () => {
+      expect(_.firstN([1, 2, 3], 4)).toEqual([1, 2, 3]);
+    });
+  });
+
+  describe('.lastN', () => {
+    it('should return an empty array if input is an empty array', () => {
+      expect(_.lastN([], 1)).toEqual([]);
+    });
+
+    it('should return an empty array if n is 0', () => {
+      expect(_.lastN([1, 2, 3], 0)).toEqual([]);
+    });
+
+    it('should return the correct length of array', () => {
+      expect(_.lastN([1, 2, 3], 2)).toEqual([2, 3]);
+    });
+
+    it('should return all elements if n >= length', () => {
+      expect(_.lastN([1, 2, 3], 4)).toEqual([1, 2, 3]);
+    });
+  });
+
+  describe('.toLowerCase', () => {
+    it('should lowercase all letters', () => {
+      expect(_.toLowerCase('HELLO')).toEqual('hello');
+    });
+  });
 });
