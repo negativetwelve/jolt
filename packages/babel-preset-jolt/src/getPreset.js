@@ -3,7 +3,7 @@ const resolveDependencies = require('./resolveDependencies');
 
 
 module.exports = (context, options = {}) => { // eslint-disable-line
-  const {target} = options;
+  const {target, import: {static: useStaticImport = false} = {}} = options;
 
   // These are the plugins that are shared with all targets.
   const plugins = [
@@ -25,9 +25,17 @@ module.exports = (context, options = {}) => { // eslint-disable-line
       target === 'node' && ['env', {targets: {node: 4}}],
       target === 'react-native' && 'react-native',
     ]),
-    plugins: resolveDependencies('babel-plugin-transform', [
-      target === 'node' && 'runtime',
-      ...plugins,
-    ]),
+    plugins: [
+      // Built-in babel plugin transforms.
+      ...resolveDependencies('babel-plugin-transform', [
+        target === 'node' && 'runtime',
+        ...plugins,
+      ]),
+
+      // Custom babel plugin transforms.
+      ...[
+        useStaticImport && require('./transforms/static-import'),
+      ].filter(Boolean),
+    ],
   };
 };

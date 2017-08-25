@@ -5,7 +5,9 @@ import getPreset from '../getPreset';
 /* eslint-disable no-undef */
 describe('babel-preset-jolt', () => {
   set('target', () => undefined);
-  set('preset', () => getPreset(null, {target}));
+  set('useStaticImports', () => false);
+  set('options', () => ({target, import: {static: useStaticImports}}));
+  set('preset', () => getPreset(null, options));
 
   context('with no target', () => {
     set('target', () => undefined);
@@ -52,6 +54,14 @@ describe('babel-preset-jolt', () => {
 
     it('should contain plugins', () => {
       expect(preset.plugins).not.toHaveLength(0);
+    });
+  });
+
+  context('with static imports enabled', () => {
+    set('useStaticImports', () => true);
+
+    it('should not error', () => {
+      expect(getPreset).not.toThrow();
     });
   });
 });
