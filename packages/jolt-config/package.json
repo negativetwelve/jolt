@@ -1,6 +1,6 @@
 {
   "name": "jolt-config",
-  "version": "2.1.0",
+  "version": "2.4.0",
   "description": "Jolt config for the CLI.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
