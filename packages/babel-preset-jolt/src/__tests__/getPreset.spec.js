@@ -57,6 +57,22 @@ describe('babel-preset-jolt', () => {
     });
   });
 
+  context('with web target', () => {
+    set('target', () => 'web');
+
+    it('should not error', () => {
+      expect(getPreset).not.toThrow();
+    });
+
+    it('should contain presets', () => {
+      expect(preset.presets).not.toHaveLength(0);
+    });
+
+    it('should contain plugins', () => {
+      expect(preset.plugins).not.toHaveLength(0);
+    });
+  });
+
   context('with static imports enabled', () => {
     set('useStaticImports', () => true);
 
