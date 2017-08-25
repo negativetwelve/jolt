@@ -4,14 +4,6 @@
 [![npm](https://img.shields.io/npm/dt/babel-preset-jolt.svg)](https://www.npmjs.com/package/babel-preset-jolt)
 [![npm](https://img.shields.io/npm/l/babel-preset-jolt.svg)](https://github.com/negativetwelve/jolt/blob/master/LICENSE)
 
-Add the following plugins:
-
-* babel-plugin-transform-builtin-extend
-* babel-plugin-transform-class-properties
-* babel-plugin-transform-decorators-legacy
-* babel-plugin-transform-export-extensions
-* babel-plugin-transform-object-rest-spread
-
 ## Getting Started
 
 Install `babel-preset-jolt` using `yarn`:
@@ -29,6 +21,30 @@ In your `.babelrc` or `package.json`, add `jolt` as a preset:
 "babel": {
   "presets": [
     "jolt"
+  ]
+}
+```
+
+### `target`
+
+By default, this will not target any environment. By passing the `target` option, you can specify if this is a `node` or `react-native` package. This will enable the `babel-preset-ev` and `babel-preset-react-native` respectively.
+
+```json
+"babel": {
+  "presets": [
+    ["jolt", {"target": "node"}]
+  ]
+}
+```
+
+### `import: {static}`
+
+Another option is to convert dynamic `import()` statements into static `require()` statements. This should be used when you do not want dynamic imports in one target (say, `web`), to affect another target (say, `react-native`).
+
+```json
+"babel": {
+  "presets": [
+    ["jolt", {"target": "react-native", "import": {"static": true}}]
   ]
 }
 ```
