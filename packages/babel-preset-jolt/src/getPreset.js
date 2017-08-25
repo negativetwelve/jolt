@@ -1,38 +1,33 @@
-// Presets
-import presetEnv from 'babel-preset-env';
-import presetReactNative from 'babel-preset-react-native';
-
-// Plugins
-import transformBuiltinExtend from 'babel-plugin-transform-builtin-extend';
-import transformClassProperties from 'babel-plugin-transform-class-properties';
-import transformDecoratorsLegacy from 'babel-plugin-transform-decorators-legacy';
-import transformExportExtensions from 'babel-plugin-transform-export-extensions';
-import transformObjectRestSpread from 'babel-plugin-transform-object-rest-spread';
-import transformRuntime from 'babel-plugin-transform-runtime';
+// Modules
+const resolveDependencies = require('./resolveDependencies');
 
 
-export default (context, options = {}) => { // eslint-disable-line
+module.exports = (context, options = {}) => { // eslint-disable-line
   const {target} = options;
 
   // These are the plugins that are shared with all targets.
   const plugins = [
-    [transformBuiltinExtend, {globals: ['Array', 'Error']}],
-
     // NOTE(mark): Decorators MUST come before class properties.
-    transformDecoratorsLegacy,
-    transformClassProperties,
-    transformExportExtensions,
-    transformObjectRestSpread,
+    'decorators-legacy',
+
+    ['builtin-extend', {globals: ['Array', 'Error']}],
+    'class-properties',
+    'export-extensions',
+    'object-rest-spread',
   ];
 
   return {
-    presets: [
-      target === 'node' && [presetEnv, {targets: {node: 4}}],
-      target === 'react-native' && presetReactNative,
-    ].filter(Boolean),
-    plugins: [
-      target === 'node' && transformRuntime,
+    // Remove comments and compact the code.
+    comments: false,
+    compact: true,
+
+    presets: resolveDependencies('babel-preset', [
+      target === 'node' && ['env', {targets: {node: 4}}],
+      target === 'react-native' && 'react-native',
+    ]),
+    plugins: resolveDependencies('babel-plugin-transform', [
+      target === 'node' && 'runtime',
       ...plugins,
-    ].filter(Boolean),
+    ]),
   };
-}
+};

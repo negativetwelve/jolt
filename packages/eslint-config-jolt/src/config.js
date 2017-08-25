@@ -31,7 +31,7 @@ module.exports = {
     'max-statements': ['error', 30],
     'max-len': ['error', 100, 2, {
       'ignoreComments': true,
-      'ignorePattern': '^import|:\\srequire(\\s*)'
+      'ignorePattern': '^import|:\\srequire(\\s*)',
     }],
     'newline-after-var': ['error', 'always'],
     'new-cap': 'off',
