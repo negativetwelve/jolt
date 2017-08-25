@@ -16,9 +16,7 @@ export default (context, options = {}) => { // eslint-disable-line
 
   // These are the plugins that are shared with all targets.
   const plugins = [
-    [transformBuiltinExtend, {
-      globals: ['Array', 'Error'],
-    }],
+    [transformBuiltinExtend, {globals: ['Array', 'Error']}],
 
     // NOTE(mark): Decorators MUST come before class properties.
     transformDecoratorsLegacy,
@@ -29,7 +27,7 @@ export default (context, options = {}) => { // eslint-disable-line
 
   return {
     presets: [
-      target === 'node' && presetEnv({targets: {node: 4}}),
+      target === 'node' && [presetEnv, {targets: {node: 4}}],
       target === 'react-native' && presetReactNative,
     ].filter(Boolean),
     plugins: [
