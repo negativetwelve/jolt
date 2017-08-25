@@ -1,6 +1,6 @@
 {
   "name": "jolt-lodash",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Lodash with Jolt extensions.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",

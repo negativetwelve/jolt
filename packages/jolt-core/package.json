@@ -1,6 +1,6 @@
 {
   "name": "jolt-core",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Core library that powers Jolt.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
