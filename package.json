@@ -25,6 +25,20 @@
       "yarn lint"
     ]
   },
+  "babel": {
+    "presets": [["env", {"targets": {"node": "4"}}]],
+    "plugins": ["transform-runtime"],
+    "comments": false,
+    "compact": true
+  },
+  "eslintIgnore": ["node_modules", "build"],
+  "eslintConfig": {
+    "extends": "./packages/eslint-config-jolt/src/config.js"
+  },
+  "jest": {
+    "preset": "jest-preset-jolt",
+    "testEnvironment": "node"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",

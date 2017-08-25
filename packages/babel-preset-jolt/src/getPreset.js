@@ -35,4 +35,4 @@ export default (context, options = {}) => { // eslint-disable-line
       ...plugins,
     ].filter(Boolean),
   };
-}
+};
