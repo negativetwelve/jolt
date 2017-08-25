@@ -3,6 +3,26 @@ import _ from '../lodash';
 
 
 describe('lodash', () => {
+  describe('.count', () => {
+    it('should return 0 for the empty array', () => {
+      expect(_.count([], () => true)).toEqual(0);
+    });
+
+    it('should return the number of elements that return true', () => {
+      expect(_.count([1, 2, 3], (number) => number < 4)).toEqual(3);
+    });
+  });
+
+  describe('.countCharacters', () => {
+    it('should return the 0 for distinct characters', () => {
+      expect(_.countCharacters('abc', 'd')).toEqual(0);
+    });
+
+    it('should return the number of a character', () => {
+      expect(_.countCharacters('abbccc', 'c')).toEqual(3);
+    });
+  });
+
   describe('.exists', () => {
     it('should return false for undefined', () => {
       expect(_.exists(undefined)).toEqual(false);

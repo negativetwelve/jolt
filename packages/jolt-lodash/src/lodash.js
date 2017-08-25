@@ -4,6 +4,18 @@ import _ from 'lodash';
 
 _.mixin({
   /**
+   * Returns the number of elements that satisfy `func`.
+   */
+  count: (array, func) => _.filter(array, func).length,
+
+  /**
+   * Counts the number of `character` that appears in `string`.
+   */
+  countCharacters: (string, character) => {
+    return _.count(string, char => char === character);
+  },
+
+  /**
    * Returns true if the object is anything except undefined or null.
    */
   exists: (object) => typeof object !== 'undefined' && object !== null,
