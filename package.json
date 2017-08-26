@@ -44,10 +44,12 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna clean --yes && lerna run clean",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "jolt": "node ./packages/jolt-cli/build/jolt.js",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "test": "jest",
-    "test:build": "yarn run build && yarn run test"
+    "test:build": "yarn run build && yarn run test",
+    "test:coverage": "yarn test -- --coverage"
   }
 }
