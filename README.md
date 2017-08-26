@@ -1,6 +1,7 @@
 # Jolt
 
 [![CircleCI branch](https://img.shields.io/circleci/project/github/negativetwelve/jolt/master.svg)](https://circleci.com/gh/negativetwelve/jolt)
+[![Coverage Status](https://coveralls.io/repos/github/negativetwelve/jolt/badge.svg?branch=master)](https://coveralls.io/github/negativetwelve/jolt?branch=master)
 
 ## Packages
 
