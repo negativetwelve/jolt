@@ -2,45 +2,67 @@
 const resolveDependencies = require('./resolveDependencies');
 
 
+const getPresets = (target) => {
+  switch (target) {
+    case 'node':
+      return [['env', {targets: {node: 4}}]];
+    case 'react-native':
+      return ['react-native'];
+    case 'web':
+      return [
+        ['env', {targets: {browsers: ['last 2 versions', 'safari >= 7']}}],
+
+        // NOTE(mark): This is included for now because it's compatible with
+        // react + webpack which is the usecase for 'web' right now.
+        'react-native',
+      ];
+    default:
+      return [];
+  }
+};
+
+const getPlugins = (target) => {
+  switch (target) {
+    case 'node':
+      return ['runtime'];
+    default:
+      return [];
+  }
+};
+
+// These are the plugins that are shared with all targets.
+// NOTE(mark): Decorators MUST come before class properties.
+const sharedPlugins = [
+  'decorators-legacy',
+
+  ['builtin-extend', {globals: ['Array', 'Error']}],
+  'class-properties',
+  'export-extensions',
+  'object-rest-spread',
+];
+
+const getCustomPlugins = ({useStaticImport}) => {
+  return [
+    useStaticImport && require('./transforms/static-import'),
+  ].filter(Boolean);
+};
+
 module.exports = (context, options = {}) => { // eslint-disable-line
   const {target, import: {static: useStaticImport = false} = {}} = options;
-
-  // These are the plugins that are shared with all targets.
-  const plugins = [
-    // NOTE(mark): Decorators MUST come before class properties.
-    'decorators-legacy',
-
-    ['builtin-extend', {globals: ['Array', 'Error']}],
-    'class-properties',
-    'export-extensions',
-    'object-rest-spread',
-  ];
 
   return {
     // Remove comments and compact the code.
     comments: false,
     compact: true,
 
-    presets: resolveDependencies('babel-preset', [
-      target === 'node' && ['env', {
-        targets: {node: 4},
-      }],
-      target === 'web' && ['env', {
-        targets: {browsers: ['last 2 versions', 'safari >= 7']},
-      }],
-      target === 'react-native' && 'react-native',
-    ]),
+    presets: resolveDependencies('babel-preset', getPresets(target)),
     plugins: [
       // Built-in babel plugin transforms.
-      ...resolveDependencies('babel-plugin-transform', [
-        target === 'node' && 'runtime',
-        ...plugins,
-      ]),
+      ...resolveDependencies('babel-plugin-transform', sharedPlugins),
+      ...resolveDependencies('babel-plugin-transform', getPlugins(target)),
 
       // Custom babel plugin transforms.
-      ...[
-        useStaticImport && require('./transforms/static-import'),
-      ].filter(Boolean),
+      ...getCustomPlugins({useStaticImport}),
     ],
   };
 };
