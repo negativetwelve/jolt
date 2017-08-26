@@ -27,7 +27,7 @@ In your `.babelrc` or `package.json`, add `jolt` as a preset:
 
 ### `target`
 
-By default, this will not target any environment. By passing the `target` option, you can specify if this is a `node` or `react-native` package. This will enable the `babel-preset-ev` and `babel-preset-react-native` respectively.
+By default, this will not target any environment. By passing the `target` option, you can specify if this is a `node`, `react-native`, or `web` package. This will enable the `babel-preset-env`, `babel-preset-react-native`, and both respectively.
 
 ```json
 "babel": {
