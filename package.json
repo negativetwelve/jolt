@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "coveralls": "^2.13.1",
     "eslint": "^4.4.1",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
@@ -17,7 +18,7 @@
   },
   "babel": {
     "presets": [
-      "./packages/babel-preset-jolt/src/preset.js"
+      ["./packages/babel-preset-jolt/src/getPreset.js", {"target": "node"}]
     ]
   },
   "eslintIgnore": [
@@ -43,10 +44,12 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna clean --yes && lerna run clean",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "jolt": "node ./packages/jolt-cli/build/jolt.js",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "test": "jest",
-    "test:build": "yarn run build && yarn run test"
+    "test:build": "yarn run build && yarn run test",
+    "test:coverage": "yarn test -- --coverage"
   }
 }
