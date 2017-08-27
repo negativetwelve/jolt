@@ -53,6 +53,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "jolt": "node ./packages/jolt-cli/build/jolt.js",
     "lint": "eslint .",
+    "lint:cached": "yarn lint -- --cache",
     "precommit": "lint-staged",
     "test": "jest",
     "test:build": "yarn run build && yarn run test",
