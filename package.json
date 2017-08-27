@@ -27,8 +27,9 @@
     ]
   },
   "eslintIgnore": [
-    "node_modules",
-    "build"
+    "build",
+    "coverage",
+    "node_modules"
   ],
   "eslintConfig": {
     "extends": "./packages/eslint-config-jolt/src/config.js"
