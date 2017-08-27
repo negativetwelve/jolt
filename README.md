@@ -1,7 +1,9 @@
 # Jolt
 
-[![CircleCI branch](https://img.shields.io/circleci/project/github/negativetwelve/jolt/master.svg)](https://circleci.com/gh/negativetwelve/jolt)
-[![Coverage Status](https://coveralls.io/repos/github/negativetwelve/jolt/badge.svg?branch=master)](https://coveralls.io/github/negativetwelve/jolt?branch=master)
+[![CircleCI](https://img.shields.io/circleci/project/github/negativetwelve/jolt.svg?label=circle)](https://circleci.com/gh/negativetwelve/jolt)
+[![Travis](https://img.shields.io/travis/negativetwelve/jolt.svg?label=travis)](https://travis-ci.org/negativetwelve/jolt)
+[![AppVeyor](https://img.shields.io/appveyor/ci/negativetwelve/jolt.svg?label=appveyor)](https://ci.appveyor.com/project/negativetwelve/jolt)
+[![Coveralls](https://img.shields.io/coveralls/negativetwelve/jolt.svg)](https://coveralls.io/github/negativetwelve/jolt?branch=master)
 
 ## Packages
 
