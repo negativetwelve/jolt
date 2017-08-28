@@ -2,7 +2,7 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/negativetwelve/jolt.svg?label=circle)](https://circleci.com/gh/negativetwelve/jolt)
 [![Travis](https://img.shields.io/travis/negativetwelve/jolt.svg?label=travis)](https://travis-ci.org/negativetwelve/jolt)
-[![AppVeyor](https://img.shields.io/appveyor/ci/negativetwelve/jolt.svg?label=appveyor)](https://ci.appveyor.com/project/negativetwelve/jolt)
+[![AppVeyor](https://img.shields.io/appveyor/ci/negativetwelve/jolt/master.svg?label=appveyor)](https://ci.appveyor.com/project/negativetwelve/jolt)
 [![Coveralls](https://img.shields.io/coveralls/negativetwelve/jolt.svg)](https://coveralls.io/github/negativetwelve/jolt?branch=master)
 
 ## Packages
