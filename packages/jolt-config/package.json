@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
   "homepage": "https://github.com/negativetwelve/jolt",
-  "repository": "negativetwelve/jolt",
+  "repository": "https://github.com/negativetwelve/jolt/tree/master/packages/jolt-config",
   "keywords": [
     "cli",
     "config",
