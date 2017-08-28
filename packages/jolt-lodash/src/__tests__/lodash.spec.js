@@ -2,6 +2,7 @@
 import _ from '../lodash';
 
 
+/* eslint-disable no-undef */
 describe('lodash', () => {
   describe('.count', () => {
     it('should return 0 for the empty array', () => {
@@ -68,6 +69,37 @@ describe('lodash', () => {
 
     it('should return all elements if n >= length', () => {
       expect(_.firstN([1, 2, 3], 4)).toEqual([1, 2, 3]);
+    });
+  });
+
+  describe('.isNumeric', () => {
+    const integers = [Infinity, -Infinity, 0, 0.1, 1, 1.1, 100000000000000000];
+    const stringIntegers = ['0', '0.1', '1', '1.1', '100000000000000000'];
+    const strings = ['a', 'hello', 'test'];
+    const nonNumericValues = ['', null, true, false, [], undefined];
+
+    forEach({value: integers}, () => {
+      it('should return true for integers', () => {
+        expect(_.isNumeric(value)).toEqual(true);
+      });
+    });
+
+    forEach({value: stringIntegers}, () => {
+      it('should return true for strings it can coerce', () => {
+        expect(_.isNumeric(value)).toEqual(true);
+      });
+    });
+
+    forEach({value: strings}, () => {
+      it('should return false for actual strings of characters', () => {
+        expect(_.isNumeric(value)).toEqual(false);
+      });
+    });
+
+    forEach({value: nonNumericValues}, () => {
+      it('should return false for non-numeric values', () => {
+        expect(_.isNumeric(value)).toEqual(false);
+      });
     });
   });
 

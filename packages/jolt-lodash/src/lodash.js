@@ -26,6 +26,21 @@ _.mixin({
   firstN: (array, n) => array.slice(0, n),
 
   /**
+   * Based off isFinite (built-in), this checks if the input can be coerced
+   * to a number.
+   */
+  isNumeric: (value) => {
+    // Edge cases that isFinite doesn't check.
+    if (_.includes([Infinity, -Infinity], value)) {
+      return true;
+    } else if (_.includes(['', true, false, null, []], value)) {
+      return false;
+    } else {
+      return isFinite(value);
+    }
+  },
+
+  /**
    * Returns the last N elements in an array.
    */
   lastN: (array, n) => {
