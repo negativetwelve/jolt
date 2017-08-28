@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Libraries
-import {commander, guard, log} from 'jolt-utils';
+import {commander, log, protect} from 'jolt-utils';
 import {CreateCommand} from 'jolt-scripts';
 
 // CLI
@@ -18,4 +18,4 @@ const program = new commander.Command(`${COMMAND} create`)
   .on('--help', () => log(''))
   .parse(process.argv);
 
-guard(() => CreateCommand.run(argument, program.opts()));
+protect(() => CreateCommand.run(argument, program.opts()));

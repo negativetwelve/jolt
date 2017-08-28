@@ -7,7 +7,7 @@ export {default as spawn} from 'cross-spawn';
 export const log = (...args) => console.log(args.join('\n'));
 
 // Propagates errors from the `callback` and exits the process.
-export const guard = async (callback) => {
+export const protect = async (callback) => {
   try {
     await callback();
   } catch (error) {
