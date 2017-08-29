@@ -57,9 +57,9 @@ _.mixin({
   },
 
   /**
-   * Delegates to the String#toLowerCase function.
+   * Provides a safe access to the String#toLowerCase function.
    */
-  toLowerCase: (string) => string.toLowerCase(),
+  toLowerCase: (string) => _.exists(string) ? string.toLowerCase() : '',
 });
 
 

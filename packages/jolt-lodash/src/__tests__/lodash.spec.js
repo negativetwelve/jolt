@@ -139,6 +139,14 @@ describe('lodash', () => {
   });
 
   describe('.toLowerCase', () => {
+    it('should return the empty string for null', () => {
+      expect(_.toLowerCase(null)).toEqual('');
+    });
+
+    it('should return the empty string for undefined', () => {
+      expect(_.toLowerCase(undefined)).toEqual('');
+    });
+
     it('should lowercase all letters', () => {
       expect(_.toLowerCase('HELLO')).toEqual('hello');
     });
