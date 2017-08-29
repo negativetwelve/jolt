@@ -4,6 +4,23 @@ import _ from '../lodash';
 
 /* eslint-disable no-undef */
 describe('lodash', () => {
+
+  // Checks that the extra functions are installed correctly.
+  describe('installed functions', () => {
+    describe('.pluralize', () => {
+      it('should pluralize words', () => {
+        expect(_.pluralize('world')).toEqual('worlds');
+      });
+    });
+
+    describe('.singularize', () => {
+      it('should singularize words', () => {
+        expect(_.singularize('worlds')).toEqual('world');
+      });
+    });
+  });
+
+  // Checks the implementation of all custom functions.
   describe('.count', () => {
     it('should return 0 for the empty array', () => {
       expect(_.count([], () => true)).toEqual(0);
