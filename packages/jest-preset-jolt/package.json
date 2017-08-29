@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "jest-plugins": "^1.4.0",
-    "jest-plugins-recommended": "^1.5.1"
+    "jest-plugins-recommended": "^1.6.1"
   },
   "peerDependencies": {
     "jest": "*"
