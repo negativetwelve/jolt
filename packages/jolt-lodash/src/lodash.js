@@ -1,8 +1,13 @@
 // Libraries
 import _ from 'lodash';
+import {plural, singular} from 'pluralize';
 
 
 _.mixin({
+  // External functions injected into lodash.
+  pluralize: plural,
+  singularize: singular,
+
   /**
    * Returns the number of elements that satisfy `func`.
    */
