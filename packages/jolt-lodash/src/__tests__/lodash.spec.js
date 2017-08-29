@@ -76,7 +76,7 @@ describe('lodash', () => {
     const integers = [Infinity, -Infinity, 0, 0.1, 1, 1.1, 100000000000000000];
     const stringIntegers = ['0', '0.1', '1', '1.1', '100000000000000000'];
     const strings = ['a', 'hello', 'test'];
-    const nonNumericValues = ['', null, true, false, [], undefined];
+    const nonNumericValues = ['', null, true, false, undefined];
 
     forEach({value: integers}, () => {
       it('should return true for integers', () => {

@@ -33,7 +33,7 @@ _.mixin({
     // Edge cases that isFinite doesn't check.
     if (_.includes([Infinity, -Infinity], value)) {
       return true;
-    } else if (_.includes(['', true, false, null, []], value)) {
+    } else if (_.includes(['', true, false, null, undefined], value)) {
       return false;
     } else {
       return isFinite(value);
