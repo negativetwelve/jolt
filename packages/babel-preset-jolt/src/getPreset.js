@@ -2,7 +2,7 @@
 const resolveDependencies = require('./resolveDependencies');
 
 
-const getPresets = (target) => {
+const getPresets = ({target, uglify}) => {
   switch (target) {
     case 'node':
       return [['env', {targets: {node: 4}}]];
@@ -10,7 +10,12 @@ const getPresets = (target) => {
       return ['react-native'];
     case 'web':
       return [
-        ['env', {targets: {browsers: ['last 2 versions', 'safari >= 7']}}],
+        ['env', {
+          targets: {
+            browsers: ['last 2 versions', 'safari >= 7'],
+            uglify,
+          },
+        }],
 
         // NOTE(mark): This is included for now because it's compatible with
         // react + webpack which is the usecase for 'web' right now.
@@ -21,7 +26,7 @@ const getPresets = (target) => {
   }
 };
 
-const getPlugins = (target) => {
+const getPlugins = ({target}) => {
   switch (target) {
     case 'node':
       return ['runtime'];
@@ -48,18 +53,24 @@ const getCustomPlugins = ({useStaticImport}) => {
 };
 
 module.exports = (context, options = {}) => { // eslint-disable-line
-  const {target, import: {static: useStaticImport = false} = {}} = options;
+  const {
+    target,
+    uglify = false,
+    import: {
+      static: useStaticImport = false,
+    } = {},
+  } = options;
 
   return {
     // Remove comments and compact the code.
     comments: false,
     compact: true,
 
-    presets: resolveDependencies('babel-preset', getPresets(target)),
+    presets: resolveDependencies('babel-preset', getPresets({target, uglify})),
     plugins: [
       // Built-in babel plugin transforms.
       ...resolveDependencies('babel-plugin-transform', sharedPlugins),
-      ...resolveDependencies('babel-plugin-transform', getPlugins(target)),
+      ...resolveDependencies('babel-plugin-transform', getPlugins({target})),
 
       // Custom babel plugin transforms.
       ...getCustomPlugins({useStaticImport}),
