@@ -1,7 +1,10 @@
 // Libraries
-import _ from 'lodash';
+import lodash from 'lodash';
 import pluralize from 'pluralize';
 
+
+// Creates a pristine version of lodash that we can inject.
+const _ = lodash.runInContext();
 
 _.mixin({
   // External functions injected into lodash.
