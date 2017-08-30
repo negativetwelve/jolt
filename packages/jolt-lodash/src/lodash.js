@@ -3,11 +3,11 @@ import lodash from 'lodash';
 import pluralize from 'pluralize';
 
 
-// Creates a pristine version of _ that we can inject.
+// Creates a pristine version of lodash that we can inject.
 const _ = lodash.runInContext();
 
 _.mixin({
-  // External functions injected into _.
+  // External functions injected into lodash.
   pluralize,
   singularize: pluralize.singular,
 
