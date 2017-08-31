@@ -16,7 +16,6 @@ yarn add --dev babel-preset-jolt
 
 In your `.babelrc` or `package.json`, add `jolt` as a preset:
 
-
 ```json
 "babel": {
   "presets": [
