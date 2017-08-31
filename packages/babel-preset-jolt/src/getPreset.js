@@ -2,28 +2,22 @@
 const resolveDependencies = require('./resolveDependencies');
 
 
-const getPresets = ({target, uglify}) => {
+const getEnv = ({target, uglify}) => {
   switch (target) {
     case 'node':
       return [['env', {targets: {node: 4}}]];
-    case 'react-native':
-      return ['react-native'];
     case 'web':
-      return [
-        ['env', {
-          targets: {
-            browsers: ['last 2 versions', 'safari >= 7'],
-            uglify,
-          },
-        }],
-
-        // NOTE(mark): This is included for now because it's compatible with
-        // react + webpack which is the usecase for 'web' right now.
-        'react-native',
-      ];
+      return [['env', {targets: {browsers: ['last 2 versions', 'safari >= 7'], uglify}}]];
     default:
       return [];
   }
+};
+
+const getPresets = ({react, reactNative}) => {
+  return [
+    react && 'react',
+    reactNative && 'react-native',
+  ];
 };
 
 const getPlugins = ({target}) => {
@@ -49,16 +43,16 @@ const sharedPlugins = [
 const getCustomPlugins = ({useStaticImport}) => {
   return [
     useStaticImport && require('./transforms/static-import'),
-  ].filter(Boolean);
+  ];
 };
 
 module.exports = (context, options = {}) => { // eslint-disable-line
   const {
     target,
+    react = false,
+    reactNative = false,
     uglify = false,
-    import: {
-      static: useStaticImport = false,
-    } = {},
+    useStaticImport = false,
   } = options;
 
   return {
@@ -66,7 +60,10 @@ module.exports = (context, options = {}) => { // eslint-disable-line
     comments: false,
     compact: true,
 
-    presets: resolveDependencies('babel-preset', getPresets({target, uglify})),
+    presets: [
+      ...resolveDependencies('babel-preset', getEnv({target, uglify})),
+      ...resolveDependencies('babel-preset', getPresets({react, reactNative})),
+    ].filter(Boolean),
     plugins: [
       // Built-in babel plugin transforms.
       ...resolveDependencies('babel-plugin-transform', sharedPlugins),
@@ -74,6 +71,6 @@ module.exports = (context, options = {}) => { // eslint-disable-line
 
       // Custom babel plugin transforms.
       ...getCustomPlugins({useStaticImport}),
-    ],
+    ].filter(Boolean),
   };
 };
