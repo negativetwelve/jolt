@@ -44,7 +44,7 @@ Another option is to convert dynamic `import()` statements into static `require(
 ```json
 "babel": {
   "presets": [
-    ["jolt", {"target": "react-native", "import": {"static": true}}]
+    ["jolt", {"reactNative": true, "useStaticImport": true,}]
   ]
 }
 ```

@@ -52,9 +52,7 @@ module.exports = (context, options = {}) => { // eslint-disable-line
     react = false,
     reactNative = false,
     uglify = false,
-    import: {
-      static: useStaticImport = false,
-    } = {},
+    useStaticImport = false,
   } = options;
 
   return {
