@@ -1,6 +1,6 @@
 {
   "name": "jolt-cli",
-  "version": "2.7.0",
+  "version": "2.7.8",
   "description": "Build high-quality packages faster with Jolt.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
@@ -24,10 +24,10 @@
     "jolt": "build/jolt.js"
   },
   "dependencies": {
-    "jolt-config": "^2.7.0",
-    "jolt-core": "^2.7.0",
-    "jolt-scripts": "^2.7.0",
-    "jolt-utils": "^2.7.0",
+    "jolt-config": "^2.7.8",
+    "jolt-core": "^2.7.8",
+    "jolt-scripts": "^2.7.8",
+    "jolt-utils": "^2.7.8",
     "update-notifier": "^2.2.0"
   },
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "jest-preset-jolt",
-  "version": "2.7.2",
+  "version": "2.7.8",
   "description": "Default jest configuration for jolt packages.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
