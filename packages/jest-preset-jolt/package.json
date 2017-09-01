@@ -17,8 +17,8 @@
     "setup.js"
   ],
   "dependencies": {
-    "jest-plugins": "^1.4.0",
-    "jest-plugins-recommended": "^1.6.1"
+    "jest-plugins": "^1.8.0",
+    "jest-plugins-recommended": "^1.8.0"
   },
   "peerDependencies": {
     "jest": "*"
