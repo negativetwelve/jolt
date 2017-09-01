@@ -2839,29 +2839,29 @@ jest-plugin-set@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/jest-plugin-set/-/jest-plugin-set-1.8.0.tgz#d04e6ac7111755374ab2be8e042640887be758f0"
 
-jest-plugins-recommended@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugins-recommended/-/jest-plugins-recommended-1.8.0.tgz#0b6032856325b93c76e7e60140b210634d4813ad"
+jest-plugins-recommended@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/jest-plugins-recommended/-/jest-plugins-recommended-1.8.2.tgz#b2520bf864ac37148c95593fd625611f7f185b3c"
   dependencies:
     jest-plugin-action "^1.8.0"
     jest-plugin-clock "^1.8.0"
     jest-plugin-console-matchers "^1.8.0"
     jest-plugin-for-each "^1.8.0"
-    jest-plugins "^1.8.0"
-    jest-plugins-rspec "^1.8.0"
+    jest-plugins "^1.8.2"
+    jest-plugins-rspec "^1.8.2"
 
-jest-plugins-rspec@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugins-rspec/-/jest-plugins-rspec-1.8.0.tgz#4b3202689a27cd5771119c3fb4f2bade1c3331ad"
+jest-plugins-rspec@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/jest-plugins-rspec/-/jest-plugins-rspec-1.8.2.tgz#3c358d12c7ff41b1d1d62a7e87e5e210b8b3be8d"
   dependencies:
     jest-plugin-context "^1.8.0"
     jest-plugin-its "^1.8.0"
     jest-plugin-set "^1.8.0"
-    jest-plugins "^1.8.0"
+    jest-plugins "^1.8.2"
 
-jest-plugins@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugins/-/jest-plugins-1.8.0.tgz#fb6c7d6e626239457f5ab988d35df9c54d4bd4bf"
+jest-plugins@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/jest-plugins/-/jest-plugins-1.8.2.tgz#58a788b32e79a2521d5101b5ee3fd69a90e90a4f"
 
 jest-regex-util@21.0.0-beta.1:
   version "21.0.0-beta.1"
