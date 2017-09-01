@@ -1,6 +1,6 @@
 {
   "name": "jolt-scripts",
-  "version": "2.7.8",
+  "version": "2.8.3",
   "description": "Set of Jolt scripts that jolt-cli runs.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
