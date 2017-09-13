@@ -1040,8 +1040,8 @@ camelcase@^4.0.0, camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000718:
-  version "1.0.30000721"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000721.tgz#931a21a7bd85016300328d21f126d84b73437d35"
+  version "1.0.30000727"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000727.tgz#20c895768398ded5f98a4beab4a76c285def41d2"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1593,8 +1593,8 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
 
 electron-to-chromium@^1.3.18:
-  version "1.3.19"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.19.tgz#73d97b0e8b05aa776cedf3cdce7fdc0538037675"
+  version "1.3.21"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.21.tgz#a967ebdcfe8ed0083fc244d1894022a8e8113ea2"
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -1691,6 +1691,10 @@ escope@^3.6.0:
 eslint-plugin-jest@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-20.0.3.tgz#ec15eba6ac0ab44a67ebf6e02672ca9d7e7cba29"
+
+eslint-plugin-jest@^21.0.2:
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.0.2.tgz#2eba7745844648513889d9d1bbefa3f5e3d05e54"
 
 eslint-scope@^3.7.1:
   version "3.7.1"
@@ -2801,67 +2805,67 @@ jest-mock@21.0.0-beta.1:
   version "21.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-21.0.0-beta.1.tgz#83ebbeee0a17b608988b92c5a89cadb8456f9b7b"
 
-jest-plugin-action@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-action/-/jest-plugin-action-1.8.0.tgz#6d6a59cc09ba5891bb71eab64eba5dd8a5cb8e6e"
+jest-plugin-action@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-action/-/jest-plugin-action-1.8.3.tgz#84c379374eeba7d017281bcafa8067a41950b661"
   dependencies:
-    jest-plugin-set "^1.8.0"
+    jest-plugin-set "^1.8.3"
 
-jest-plugin-clock@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-clock/-/jest-plugin-clock-1.8.0.tgz#2dd9161bd21434db08a1444fc9bb504341f06732"
+jest-plugin-clock@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-clock/-/jest-plugin-clock-1.8.3.tgz#0d212a3c2a23328773f0357f0d5d5c6d214a6eb8"
   dependencies:
     mockdate "^2.0.2"
 
-jest-plugin-console-matchers@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-console-matchers/-/jest-plugin-console-matchers-1.8.0.tgz#724673e46054fae511a5b624b710e3542f765b2a"
+jest-plugin-console-matchers@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-console-matchers/-/jest-plugin-console-matchers-1.8.3.tgz#18d376ee1ca232130f7b47a03465a6da2653b1e6"
 
-jest-plugin-context@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-context/-/jest-plugin-context-1.8.0.tgz#208d944c860ebe1e9580c538afcecf0703e5b914"
+jest-plugin-context@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-context/-/jest-plugin-context-1.8.3.tgz#e3588140651d4617684d902eacf5e1b05a122e27"
 
-jest-plugin-for-each@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-for-each/-/jest-plugin-for-each-1.8.0.tgz#1b15dcc1d15deb10a7644a6efcd0874381426b87"
+jest-plugin-for-each@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-for-each/-/jest-plugin-for-each-1.8.3.tgz#bd55b5a054d196b6ae3ed364c41bb1df341a20d3"
   dependencies:
     invariant "^2.2.2"
-    jest-plugin-set "^1.8.0"
+    jest-plugin-set "^1.8.3"
 
-jest-plugin-its@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-its/-/jest-plugin-its-1.8.0.tgz#49f633b24ff0ebbe38e8dbaa3572dbd3cf4ebb1d"
+jest-plugin-its@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-its/-/jest-plugin-its-1.8.3.tgz#d7c87ced18d1996f894b257c64990384553a499a"
   dependencies:
     invariant "^2.2.2"
-    jest-plugin-set "^1.8.0"
+    jest-plugin-set "^1.8.3"
 
-jest-plugin-set@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/jest-plugin-set/-/jest-plugin-set-1.8.0.tgz#d04e6ac7111755374ab2be8e042640887be758f0"
+jest-plugin-set@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugin-set/-/jest-plugin-set-1.8.3.tgz#c608a3c1f71a61059934ef010270ce4245c946b8"
 
 jest-plugins-recommended@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/jest-plugins-recommended/-/jest-plugins-recommended-1.8.2.tgz#b2520bf864ac37148c95593fd625611f7f185b3c"
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugins-recommended/-/jest-plugins-recommended-1.8.3.tgz#9d0458c0e180e1216f4f3099a5e8f7881abc9063"
   dependencies:
-    jest-plugin-action "^1.8.0"
-    jest-plugin-clock "^1.8.0"
-    jest-plugin-console-matchers "^1.8.0"
-    jest-plugin-for-each "^1.8.0"
-    jest-plugins "^1.8.2"
-    jest-plugins-rspec "^1.8.2"
+    jest-plugin-action "^1.8.3"
+    jest-plugin-clock "^1.8.3"
+    jest-plugin-console-matchers "^1.8.3"
+    jest-plugin-for-each "^1.8.3"
+    jest-plugins "^1.8.3"
+    jest-plugins-rspec "^1.8.3"
 
-jest-plugins-rspec@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/jest-plugins-rspec/-/jest-plugins-rspec-1.8.2.tgz#3c358d12c7ff41b1d1d62a7e87e5e210b8b3be8d"
+jest-plugins-rspec@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugins-rspec/-/jest-plugins-rspec-1.8.3.tgz#9cb627c135888629156e475778814225086e5da4"
   dependencies:
-    jest-plugin-context "^1.8.0"
-    jest-plugin-its "^1.8.0"
-    jest-plugin-set "^1.8.0"
-    jest-plugins "^1.8.2"
+    jest-plugin-context "^1.8.3"
+    jest-plugin-its "^1.8.3"
+    jest-plugin-set "^1.8.3"
+    jest-plugins "^1.8.3"
 
-jest-plugins@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/jest-plugins/-/jest-plugins-1.8.2.tgz#58a788b32e79a2521d5101b5ee3fd69a90e90a4f"
+jest-plugins@^1.8.2, jest-plugins@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/jest-plugins/-/jest-plugins-1.8.3.tgz#96c0495c2091d3d4284b2d9cabf85d151631fcad"
 
 jest-regex-util@21.0.0-beta.1:
   version "21.0.0-beta.1"
@@ -2967,9 +2971,16 @@ js-yaml@3.6.1:
     argparse "^1.0.7"
     esprima "^2.6.0"
 
-js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@^3.7.0, js-yaml@^3.9.1:
+js-yaml@^3.4.3, js-yaml@^3.7.0, js-yaml@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.1.tgz#08775cebdfdd359209f0d2acd383c8f86a6904a0"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
+js-yaml@^3.5.1:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
