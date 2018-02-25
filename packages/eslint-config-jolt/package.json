@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jolt",
-  "version": "2.8.6",
+  "version": "2.8.7",
   "description": "Default ESLint config for jolt packages.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
