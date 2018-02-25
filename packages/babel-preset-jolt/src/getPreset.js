@@ -5,7 +5,7 @@ const resolveDependencies = require('./resolveDependencies');
 const getEnv = ({target, uglify}) => {
   switch (target) {
     case 'node':
-      return [['env', {targets: {node: 4}, useBuiltIns: true}]];
+      return [['env', {targets: {node: 4}, uglify}]];
     case 'web':
       return [['env', {targets: {browsers: ['last 2 versions', 'safari >= 7'], uglify}}]];
     default:
